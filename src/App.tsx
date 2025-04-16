@@ -1,20 +1,20 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import BenefitsList from "./pages/BenefitsList";
-import BenefitDetail from "./pages/BenefitDetail";
+import BenefitsDetails from "./pages/BenefitDetails";
 import NotFound from "./pages/NotFound";
 
-const App = () => {
+function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
-        <Route path="/" element={<Navigate to="/beneficios" replace />} />
+        <Route path="/" element={<BenefitsList />} />
         <Route path="/beneficios" element={<BenefitsList />} />
-        <Route path="/beneficio/:id" element={<BenefitDetail />} />
+        <Route path="/beneficio/:id" element={<BenefitsDetails />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
-};
+}
 
 export default App;
 
