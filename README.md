@@ -33,29 +33,15 @@ cd sportclub-front
 npm install
 ```
 
-### 3. Configurar Variables de Entorno
-
-Crear un archivo `.env` en la raíz del proyecto:
-
-```bash
-cp .env.example .env
-```
-
-Editar el archivo `.env` y configurar:
-
-```
-VITE_API_URL=http://localhost:3000/api
-```
-
-### 4. Configurar el Backend
+### 3. Configurar el Backend
 
 El proyecto requiere que el backend esté en ejecución. Asegúrate de:
 
 1. Tener el repositorio del backend clonado
 2. Seguir las instrucciones de instalación del backend
-3. Iniciar el servidor backend en el puerto 3000
+3. Iniciar el servidor backend en el puerto 3000 (la URL de la API está configurada en `src/services/api.ts`)
 
-### 5. Iniciar la Aplicación
+### 4. Iniciar la Aplicación
 
 En una terminal, ejecuta:
 
@@ -140,8 +126,7 @@ La configuración de TypeScript está en `tsconfig.json`. Incluye:
 La aplicación se conecta al backend en `http://localhost:3000/api`. Asegúrate de:
 
 1. Tener el backend en ejecución
-2. Verificar que la URL en `.env` sea correcta
-3. Comprobar que el backend esté respondiendo en `/api/benefits`
+2. Comprobar que el backend esté respondiendo en `/api/benefits`
 
 ## Testing
 
@@ -163,7 +148,6 @@ npm run test:coverage
 
 1. **Backend no responde**
    - Verifica que el backend esté en ejecución
-   - Comprueba la URL en `.env`
    - Revisa los logs del backend
 
 2. **Errores de TypeScript**
